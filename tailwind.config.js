@@ -12,7 +12,10 @@ export default {
         blue: '#567EBB',
         blueGray: '#606D80',
         light: '#DCE0E6',
-      }
+      },
+      fontFamily: {
+        sans: ["Poppins", "sans-serif"],
+      },
     }
   },
   plugins: [],
