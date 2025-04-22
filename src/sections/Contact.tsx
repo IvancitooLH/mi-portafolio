@@ -27,7 +27,7 @@ const Contact = () => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.6 }}
-      className="bg-surface text-light py-20 min-h-[80vh] flex items-center justify-center"
+      className="bg-surface text-light py-20 h-screen flex items-center justify-center"
     >
       <div className="max-w-3xl w-full px-4 text-center">
         <motion.h3

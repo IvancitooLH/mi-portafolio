@@ -1,17 +1,11 @@
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
+import { navLinks } from "../data/navLinks";
 
 const Navbar = () => {
-  const [activeLink, setActiveLink] = useState("#home"); // Estado para el enlace activo
+  const [activeLink, setActiveLink] = useState("#home");
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  const navLinks = [
-    { label: "Inicio", href: "#home" },
-    { label: "Proyectos", href: "#projects" },
-    { label: "Tecnologías", href: "#technologies" },
-    { label: "Contacto", href: "#contact" },
-  ];
-
-  // Detecta la sección activa al hacer scroll
   useEffect(() => {
     const handleScroll = () => {
       const sections = navLinks.map((link) =>
@@ -32,6 +26,11 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [navLinks]);
 
+  const handleLinkClick = (href: string) => {
+    setActiveLink(href);
+    setMenuOpen(false);
+  };
+
   return (
     <motion.nav
       initial={{ y: -50, opacity: 0 }}
@@ -49,7 +48,37 @@ const Navbar = () => {
           Portafolio
         </motion.h2>
 
-        <ul className="flex gap-6 text-sm">
+        {/* Botón hamburguesa */}
+        <button
+          onClick={() => setMenuOpen(!menuOpen)}
+          className="text-light sm:hidden focus:outline-none"
+        >
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            {menuOpen ? (
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
+            ) : (
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            )}
+          </svg>
+        </button>
+
+        {/* Menú desktop */}
+        <ul className="hidden sm:flex gap-6 text-sm">
           {navLinks.map((link, i) => (
             <motion.li
               key={i}
@@ -62,7 +91,7 @@ const Navbar = () => {
               <a
                 href={link.href}
                 className="hover:text-blue transition-colors"
-                onClick={() => setActiveLink(link.href)} // Cambia el enlace activo manualmente
+                onClick={() => handleLinkClick(link.href)}
               >
                 {link.label}
               </a>
@@ -70,6 +99,36 @@ const Navbar = () => {
           ))}
         </ul>
       </div>
+
+      {/* Menú móvil */}
+      <AnimatePresence>
+        {menuOpen && (
+          <motion.ul
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="sm:hidden bg-dark px-6 pb-2 text-sm flex flex-col gap-6 mt-4"
+          >
+            {navLinks.map((link, i) => (
+              <li
+                key={i}
+                className={`${
+                  activeLink === link.href ? "text-blue font-bold" : ""
+                }`}
+              >
+                <a
+                  href={link.href}
+                  className="hover:text-blue transition-colors"
+                  onClick={() => handleLinkClick(link.href)}
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </motion.ul>
+        )}
+      </AnimatePresence>
     </motion.nav>
   );
 };

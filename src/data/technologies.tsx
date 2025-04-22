@@ -1,14 +1,9 @@
 import { IoLogoHtml5 } from "react-icons/io5";
-import { FaCss3Alt } from "react-icons/fa6";
-import { IoLogoJavascript } from "react-icons/io5";
+import { FaCss3Alt, FaNodeJs, FaPython } from "react-icons/fa6";
+import { IoLogoJavascript, IoLogoReact } from "react-icons/io5";
 import { BiLogoTypescript } from "react-icons/bi";
-import { IoLogoReact } from "react-icons/io5";
-import { SiTailwindcss } from "react-icons/si";
-import { SiNextdotjs } from "react-icons/si";
-import { FaNodeJs } from "react-icons/fa6";
-import { SiExpress } from "react-icons/si";
+import { SiTailwindcss, SiNextdotjs, SiExpress, SiPhp } from "react-icons/si";
 import { GrMysql } from "react-icons/gr";
-import { SiPhp } from "react-icons/si";
 
 interface Technology {
   name: string;
@@ -18,68 +13,75 @@ interface Technology {
 
 export const technologies: Technology[] = [
   {
+    name: "Python",
+    icon: <FaPython />,
+    description:
+      "Lenguaje de programación flexible y de alto nivel, ampliamente utilizado en desarrollo web, automatización y análisis de datos.",
+  },
+  {
     name: "HTML",
-    icon: <IoLogoHtml5 />, // Añadido el ícono
-    description: "Lenguaje de marcado estándar para crear páginas web.",
+    icon: <IoLogoHtml5 />,
+    description:
+      "Lenguaje de marcado esencial para estructurar contenidos en la web.",
   },
   {
     name: "CSS",
-    icon: <FaCss3Alt />, // Añadido el ícono
+    icon: <FaCss3Alt />,
     description:
-      "Lenguaje de estilo utilizado para describir la presentación de un documento HTML.",
+      "Lenguaje de estilos utilizado para definir la apariencia y el diseño de documentos HTML.",
   },
   {
     name: "JavaScript",
-    icon: <IoLogoJavascript />, // Añadido el ícono
+    icon: <IoLogoJavascript />,
     description:
-      "Lenguaje de programación versátil y ampliamente utilizado para el desarrollo web.",
+      "Lenguaje de programación clave en el desarrollo web moderno, tanto en el lado del cliente como del servidor.",
   },
   {
     name: "TypeScript",
-    icon: <BiLogoTypescript />, // Añadido el ícono
+    icon: <BiLogoTypescript />,
     description:
-      "Superset de JavaScript que añade tipado estático y características avanzadas.",
+      "Extensión de JavaScript que incorpora tipado estático, mejorando la escalabilidad y el mantenimiento del código.",
   },
   {
     name: "React",
-    icon: <IoLogoReact />, // Añadido el ícono
+    icon: <IoLogoReact />,
     description:
-      "Biblioteca de JavaScript para construir interfaces de usuario interactivas.",
+      "Biblioteca de JavaScript para construir interfaces de usuario dinámicas y reutilizables.",
   },
   {
     name: "Tailwind CSS",
-    icon: <SiTailwindcss />, // Añadido el ícono
+    icon: <SiTailwindcss />,
     description:
-      "Framework CSS de utilidad para crear diseños personalizados y responsivos.",
+      "Framework de utilidades CSS que permite crear interfaces altamente personalizadas y responsivas.",
   },
   {
     name: "Next.js",
-    icon: <SiNextdotjs />, // Añadido el ícono
+    icon: <SiNextdotjs />,
     description:
-      "Framework de React para aplicaciones web rápidas y optimizadas.",
+      "Framework basado en React que facilita el desarrollo de aplicaciones web escalables y de alto rendimiento.",
   },
   {
     name: "Node.js",
-    icon: <FaNodeJs />, // Añadido el ícono
+    icon: <FaNodeJs />,
     description:
-      "Entorno de ejecución para JavaScript en el lado del servidor.",
+      "Entorno de ejecución para JavaScript orientado al desarrollo de aplicaciones en el lado del servidor.",
   },
   {
     name: "Express",
-    icon: <SiExpress />, // Añadido el ícono
+    icon: <SiExpress />,
     description:
-      "Framework minimalista para construir aplicaciones web con Node.js.",
+      "Framework minimalista para Node.js que permite crear APIs y aplicaciones web de forma rápida y eficiente.",
   },
   {
     name: "MySQL",
-    icon: <GrMysql />, // Añadido el ícono
+    icon: <GrMysql />,
     description:
-      "Sistema de gestión de bases de datos relacional ampliamente utilizado.",
+      "Sistema de gestión de bases de datos relacional, reconocido por su fiabilidad, rendimiento y facilidad de uso.",
   },
   {
     name: "PHP",
-    icon: <SiPhp />, // Añadido el ícono
+    icon: <SiPhp />,
     description:
-      "Lenguaje de programación del lado del servidor, ideal para desarrollo web.",
+      "Lenguaje de programación del lado del servidor, ampliamente adoptado para el desarrollo de sitios y aplicaciones web.",
   },
 ];
