@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import MiImagen from "../assets/MiImagen2.jpg";
+import MiImagen from "../assets/MiImagen.jpg";
 
 const Home = () => {
   return (
@@ -72,7 +72,7 @@ const Home = () => {
           </motion.p>
 
           <motion.a
-            href="/cv-carlos-ivan.pdf"
+            href="../../public/CarlosIvanCV.pdf"
             download
             className="inline-block bg-blue text-light px-6 py-3 rounded shadow hover:bg-blueDark transition-colors font-medium"
             initial={{ opacity: 0, y: 20 }}

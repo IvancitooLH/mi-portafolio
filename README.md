@@ -1,54 +1,51 @@
-# React + TypeScript + Vite
+# 🧑‍💻 Portafolio de Carlos Iván
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+¡Hola! Bienvenido a mi portafolio personal. Aquí podrás encontrar información sobre mí, los proyectos en los que he trabajado, las tecnologías que manejo y cómo contactarme.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tecnologías que utilizo
 
-## Expanding the ESLint configuration
+- **Frontend**: React, TypeScript, JavaScript, Tailwind CSS, Next.js
+- **Backend**: Node.js, Express
+- **Base de datos**: MySQL
+- **Otros**: Git, GitHub, Vite
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 📁 Estructura del proyecto
+
+```
+src/
+├── assets/        # Imágenes y recursos estáticos
+├── components/    # Componentes reutilizables
+├── data/          # Datos usados para proyectos y tecnologías
+├── sections/         # Secciones principales del portafolio
+└── main.tsx       # Punto de entrada principal
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🖥️ Descripción general
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+Este portafolio está diseñado con un enfoque moderno y minimalista usando **React** y **Tailwind CSS**, con animaciones suaves usando **Framer Motion**. El diseño es completamente responsivo y adaptable a diferentes dispositivos.
+
+---
+
+## 📦 Instalación y uso
+
+```bash
+# Clona el repositorio
+git clone https://github.com/IvancitooLH/mi-portafolio.git
+
+# Entra en la carpeta
+cd mi-portafolio
+
+# Instala las dependencias
+pnpm install
+
+# Ejecuta el proyecto
+pnpm dev
 ```
+
+Gracias por visitar mi portafolio ✨

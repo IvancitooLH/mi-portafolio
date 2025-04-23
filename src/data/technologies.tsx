@@ -1,3 +1,5 @@
+import { SiDotnet } from "react-icons/si";
+
 import { IoLogoHtml5 } from "react-icons/io5";
 import { FaCss3Alt, FaNodeJs, FaPython } from "react-icons/fa6";
 import { IoLogoJavascript, IoLogoReact } from "react-icons/io5";
@@ -12,6 +14,12 @@ interface Technology {
 }
 
 export const technologies: Technology[] = [
+  {
+    name: "C#",
+    icon: <SiDotnet />,
+    description:
+      "Lenguaje de programación desarrollado por Microsoft, comúnmente usado para desarrollo web con ASP.NET, aplicaciones de escritorio y videojuegos con Unity.",
+  },
   {
     name: "Python",
     icon: <FaPython />,

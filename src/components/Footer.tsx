@@ -45,7 +45,7 @@ const Footer = () => {
       className="bg-dark text-blueGray py-8 text-center text-sm mt-16"
     >
       <p className="mb-4">
-        © {new Date().getFullYear()} Carlos Iván. Todos los derechos reservados.
+        © {new Date().getFullYear()} Carlos Ivan. Todos los derechos reservados.
       </p>
 
       <div className="flex justify-center gap-6 text-xl">
